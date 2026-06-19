@@ -4,6 +4,15 @@ const navLinks = document.getElementById('navLinks');
 
 mobileMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
 });
 
 // Smooth Scrolling
