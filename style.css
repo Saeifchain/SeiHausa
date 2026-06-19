@@ -171,7 +171,8 @@ nav.transparent {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(56, 0, 0, 0.7), rgba(0,0,0,0.7));
+    /* so the video is visible, use a lighter overlay */
+    background: linear-gradient(rgba(56, 0, 0, 0.35), rgba(0,0,0,0.35));
     z-index: 1;
 }
 
@@ -186,6 +187,13 @@ nav.transparent {
     min-height: 100%;
     z-index: 0;
     pointer-events: none;
+
+    /* improve rendering on some browsers/devices */
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+    /* slight contrast/brightness tweak (adjust as needed) */
+    filter: brightness(0.95) contrast(1.05);
 }
 
 .hero h1 {
