@@ -485,9 +485,12 @@ footer {
 
     .nav-links a.nav-button {
         margin-left: 0;
-        width: 100%;
+        width: auto;
+        max-width: 240px;
+        align-self: center;
         text-align: center;
-        padding: 0.85rem 1rem;
+        padding: 0.65rem 0.85rem;
+        font-size: 0.95rem;
     }
 
     .mobile-menu {
