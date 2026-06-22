@@ -486,7 +486,7 @@ footer {
     .nav-links a.nav-button {
         margin-left: 0;
         width: auto;
-        max-width: 240px;
+        max-width: 200px;
         align-self: center;
         text-align: center;
         padding: 0.65rem 0.85rem;
